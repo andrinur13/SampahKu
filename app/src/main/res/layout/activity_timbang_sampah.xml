@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#16a085"
+        android:padding="10dp"
+        tools:context=".TimbangSampah">
+
+    <LinearLayout
+        android:background="#16a085"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/back_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_arrow"
+                android:onClick="kembali"
+                />
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bank Sampah"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginHorizontal="10dp"
+            android:padding="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/bg_input"
+            >
+
+            <EditText
+                android:layout_marginTop="40dp"
+                android:id="@+id/beratsampah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_login"
+                android:padding="10dp"
+                android:hint="Berat Sampah"
+                android:inputType="numberDecimal"
+                />
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pilih Jenis Sampah"
+                />
+            <RadioGroup
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <RadioButton
+                    android:id="@+id/sampah_anorganik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Anorganik"
+                    />
+
+                <RadioButton
+                    android:id="@+id/sampah_organik"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Organik"
+                    />
+
+                <RadioButton
+                    android:id="@+id/sampah_b3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B3 (Bahan Berbahaya dan Beracun)"
+                    />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_jumlah_sampah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Cek Biaya Sampah"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_berat_sampah"
+                android:onClick="cekberatsampah"
+                />
+
+            <TextView
+                android:id="@+id/jumlahsaldosampah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_login"
+                android:padding="10dp"
+                android:hint="Jumlah Saldo Sampah"
+                android:layout_marginTop="20dp"
+                />
+
+            <Button
+                android:id="@+id/tabung"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Tabung"
+                android:textColor="#ffffff"
+                android:onClick="tabungsampah"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/login_button"
+                />
+
+
+        </LinearLayout>
+
+    </FrameLayout>
